@@ -159,7 +159,7 @@ font-size:14px;
 <header>
 <div id="particles-js"></div>
 
-<h1>Rony Cakraborty</h1>
+<h1 id="typewriter"></h1>
 <p>Cybersecurity Specialist · Ethical Hacker · WordPress Security Expert · OSINT Practitioner</p>
 <p style="font-size:15px;opacity:.8;">Helping businesses secure websites & digital assets worldwide</p>
 <div class="btn" id="hireBtn">Hire Me</div>
@@ -184,6 +184,7 @@ and protect digital assets using ethical, legal, and industry-standard security 
 <li>🦠 Malware Removal & Cleanup</li>
 <li>🛡️ Web Application Vulnerability Assessment</li>
 <li>🕵️ OSINT & Digital Footprint Analysis</li>
+<li>🎨 WordPress Theme Customization & Landing Page Setup</li>
 <li>⚙️ Secure WordPress Migration & Hardening</li>
 </ul>
 </div>
@@ -291,6 +292,23 @@ cards.forEach(c=>observer.observe(c));
 
 document.getElementById('hireBtn').onclick=()=>{
 document.getElementById('contact').scrollIntoView({behavior:'smooth'});
+};
+</script>
+<script>
+const text = "Rony Cakraborty";
+let index = 0;
+const speed = 120; // typing speed (ms)
+
+function typeWriter() {
+  if (index < text.length) {
+    document.getElementById("typewriter").innerHTML += text.charAt(index);
+    index++;
+    setTimeout(typeWriter, speed);
+  }
+}
+
+window.onload = () => {
+  typeWriter();
 };
 </script>
 
